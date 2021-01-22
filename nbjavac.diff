@@ -59,6 +59,7 @@ index 0000000..5d629ce
 --- /dev/null
 +++ b/build-jdk.sh
 @@ -0,0 +1,41 @@
++BOOT_JAVA_HOME=/home/langtools/jdks/jdk-14
 +if ! [ -f $BOOT_JAVA_HOME/bin/javac ]; then
 +  echo Specify BOOT_JAVA_HOME environment variable!
 +  exit 1
