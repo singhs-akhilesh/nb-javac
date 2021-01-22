@@ -58,7 +58,7 @@ new file mode 100644
 index 0000000..5d629ce
 --- /dev/null
 +++ b/build-jdk.sh
-@@ -0,0 +1,41 @@
+@@ -0,0 +1,43 @@
 +BOOT_JAVA_HOME=/home/langtools/jdks/jdk-14
 +if ! [ -f $BOOT_JAVA_HOME/bin/javac ]; then
 +  echo Specify BOOT_JAVA_HOME environment variable!
@@ -102,9 +102,6 @@ index 0000000..5d629ce
 +echo "jmod success"
 +$BOOT_JAVA_HOME/bin/jlink -p build/test/modules --add-modules ALL-MODULE-PATH --output build/test/jdk
 +echo "checking build/test/jdk"
-+if [ -s build/test/jdk ]; then
-+      echo "direcotry build/test/jdk is present"
-+fi;
 +echo "jlink success"
 diff --git a/src/jdk.compiler/share/classes/module-info.java b/src/jdk.compiler/share/classes/module-info.java
 index 6026cdd..9af9e50 100644
